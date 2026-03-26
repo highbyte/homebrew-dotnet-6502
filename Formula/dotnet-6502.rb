@@ -18,8 +18,11 @@ class Dotnet6502 < Formula
   def install
     # Install everything into libexec (app needs native libs in same directory)
     libexec.install Dir["*"]
-    # Wrapper script that launches from libexec so native libs are found
-    (bin/"dotnet-6502").write_env_script libexec/"Highbyte.DotNet6502.App.Avalonia.Desktop"
+    # Shell wrapper that launches the executable from libexec
+    (bin/"dotnet-6502").write <<~EOS
+      #!/bin/bash
+      exec "#{libexec}/Highbyte.DotNet6502.App.Avalonia.Desktop" "$@"
+    EOS
   end
 
   test do
