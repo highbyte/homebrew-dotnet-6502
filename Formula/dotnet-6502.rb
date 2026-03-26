@@ -1,4 +1,4 @@
-class DotNet6502 < Formula
+class Dotnet6502 < Formula
   desc "6502 CPU and C64 emulator built with .NET and Avalonia"
   homepage "https://github.com/highbyte/dotnet-6502"
   version "0.29.0-alpha"
