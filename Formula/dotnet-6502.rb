@@ -20,7 +20,8 @@ class Dotnet6502 < Formula
     libexec.install Dir["*"]
     # Shell wrapper that launches the executable from libexec
     # On ARM64 Linux, SkiaSharp requires preloading libfreetype and libuuid
-    # to resolve missing symbols (FT_Get_BDF_Property, uuid_generate_random)
+    # to resolve missing symbols (FT_Get_BDF_Property, uuid_generate_random).
+    # Library paths below are for Ubuntu/Debian (Homebrew's primary Linux target).
     (bin/"dotnet-6502").write <<~EOS
       #!/bin/bash
       if [ "$(uname -m)" = "aarch64" ]; then
