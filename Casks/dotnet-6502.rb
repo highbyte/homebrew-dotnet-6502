@@ -10,8 +10,8 @@ cask "dotnet-6502" do
 
   depends_on arch: :arm64
 
-  app "DotNet6502.app"
-  binary "DotNet6502.app/Contents/MacOS/Highbyte.DotNet6502.App.Avalonia.Desktop", target: "dotnet-6502"
+  app "DotNet6502 Emulator.app"
+  binary "DotNet6502 Emulator.app/Contents/MacOS/Highbyte.DotNet6502.App.Avalonia.Desktop", target: "dotnet-6502"
 
   # Removes Gatekeeper quarantine flag automatically
   preflight do
