@@ -1,17 +1,17 @@
 class Dotnet6502 < Formula
   desc "6502 CPU and C64 emulator built with .NET and Avalonia"
   homepage "https://github.com/highbyte/dotnet-6502"
-  version "0.29.11-alpha"
+  version "0.30.0-alpha"
   license "MIT"
 
   on_linux do
     on_intel do
       url "https://github.com/highbyte/dotnet-6502/releases/download/v#{version}/DotNet6502-Avalonia-linux-x64.zip"
-      sha256 "e01d94383e241c885dbab34b296e6adcf128ce993b95c236521f6069ef6e44c9"
+      sha256 "f3727b6abc2aa7c8b4fc3d9fd8bc490cf90b7dc2e9b0babd1b162ce7593c4d2b"
     end
     on_arm do
       url "https://github.com/highbyte/dotnet-6502/releases/download/v#{version}/DotNet6502-Avalonia-linux-arm64.zip"
-      sha256 "cd47dc0586dad95c6daae2bd176cc71705427c6ee8ca256efb71a99b81baa2af"
+      sha256 "c3269dc90a7395a23bc16bea50373557cf03616005febb37f246e33914e4323f"
     end
   end
 
