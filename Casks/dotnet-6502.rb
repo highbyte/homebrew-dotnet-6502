@@ -1,8 +1,8 @@
 cask "dotnet-6502" do
-  version "0.30.0-alpha"
+  version "0.31.0-alpha"
 
   url "https://github.com/highbyte/dotnet-6502/releases/download/v#{version}/DotNet6502-Avalonia-osx-arm64.zip"
-  sha256 "8c1c24ecadbef93149eb78b93875a8b2b66f8920c1fb5a54ddc1f2ec412b79a0"
+  sha256 "ae5c2f0959c4449cc62af776357fef1488aeaeab8f3a98ce5023d500d88ad107"
 
   name "DotNet 6502 Emulator"
   desc "6502 CPU and C64 emulator built with .NET and Avalonia"
@@ -10,8 +10,8 @@ cask "dotnet-6502" do
 
   depends_on arch: :arm64
 
-  app "DotNet6502 Emulator.app"
-  binary "DotNet6502 Emulator.app/Contents/MacOS/Highbyte.DotNet6502.App.Avalonia.Desktop", target: "dotnet-6502"
+  app "DotNet 6502 Emulator.app"
+  binary "DotNet 6502 Emulator.app/Contents/MacOS/Highbyte.DotNet6502.App.Avalonia.Desktop", target: "dotnet-6502"
 
   # Removes Gatekeeper quarantine flag automatically
   preflight do
