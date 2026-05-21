@@ -1,8 +1,8 @@
 cask "dotnet-6502" do
-  version "0.34.0-alpha"
+  version "0.34.1-alpha"
 
   url "https://github.com/highbyte/dotnet-6502/releases/download/v#{version}/DotNet6502-Avalonia-osx-arm64.zip"
-  sha256 "0c1d034d90194fc156af9c8f27d55987326198677b2d65c582ab8d63c740a191"
+  sha256 "3ca50a02d0faadeb1840e6122005600369fb98a4b8afa771ef400c07d7390525"
 
   name "DotNet 6502 Emulator"
   desc "6502 CPU and C64 emulator built with .NET and Avalonia"
