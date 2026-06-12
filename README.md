@@ -2,11 +2,12 @@
 
 Homebrew tap for the [DotNet6502](https://github.com/highbyte/dotnet-6502) emulator — a 6502 CPU and C64 emulator built with .NET and Avalonia.
 
-This tap provides three packages:
+This tap provides four packages:
 
 - **dotnet-6502** — the desktop emulator app (Avalonia GUI).
 - **dotnet-6502-headless** — headless emulator driven by CLI arguments and Lua scripts.
 - **dotnet-6502-remote** — remote control CLI client for the emulator.
+- **dotnet-6502-terminal** — interactive terminal (TUI) emulator host.
 
 ## Setup
 
@@ -46,6 +47,14 @@ macOS (Apple Silicon) and Linux (x64 / ARM64):
 brew install dotnet-6502-remote
 ```
 
+### dotnet-6502-terminal
+
+macOS (Apple Silicon) and Linux (x64 / ARM64):
+
+```bash
+brew install dotnet-6502-terminal
+```
+
 ## Updating
 
 ```bash
@@ -53,6 +62,7 @@ brew update
 brew upgrade dotnet-6502
 brew upgrade dotnet-6502-headless
 brew upgrade dotnet-6502-remote
+brew upgrade dotnet-6502-terminal
 ```
 
 ## Uninstalling
@@ -64,7 +74,8 @@ brew uninstall --cask dotnet-6502
 # Linux desktop app
 brew uninstall dotnet-6502
 
-# Headless and remote (macOS and Linux)
+# Headless, remote and terminal (macOS and Linux)
 brew uninstall dotnet-6502-headless
 brew uninstall dotnet-6502-remote
+brew uninstall dotnet-6502-terminal
 ```
