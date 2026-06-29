@@ -1,24 +1,24 @@
 class Dotnet6502Remote < Formula
   desc "Remote control CLI client for the dotnet-6502 emulator"
   homepage "https://github.com/highbyte/dotnet-6502"
-  version "0.40.0-alpha"
+  version "0.40.1-alpha"
   license "MIT"
 
   on_macos do
     on_arm do
       url "https://github.com/highbyte/dotnet-6502/releases/download/v#{version}/DotNet6502-RemoteClient-osx-arm64.zip"
-      sha256 "e96bfdc79f16b56c8309f8825bcec55614cb2ffc419ac6efa28c1fe2c8b8f790"
+      sha256 "6b8b2f2cc05f9c33991d9c8984dbfbfff98dad6a4b2ef83c4b8c284cb137e6cc"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/highbyte/dotnet-6502/releases/download/v#{version}/DotNet6502-RemoteClient-linux-x64.zip"
-      sha256 "db2ff4bce3374506d2c8953555200a5c49823268db9be5556ad1d5e932e7822b"
+      sha256 "28379d142f8d1be2800a9ff5c4641169e746db6e67a6ddfbbc4ebb84751edc8b"
     end
     on_arm do
       url "https://github.com/highbyte/dotnet-6502/releases/download/v#{version}/DotNet6502-RemoteClient-linux-arm64.zip"
-      sha256 "3fe8e3fac72a9221703133e73803d9eac76fa5faaa1b6701a8423e0ba26a29dc"
+      sha256 "f7dc5c68bc804871a69d01fca69f5fdb6adc921474f7c6a95f667957a1a4f029"
     end
   end
 
