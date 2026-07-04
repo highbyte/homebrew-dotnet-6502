@@ -17,4 +17,17 @@ cask "dotnet-6502" do
   preflight do
     system_command "/usr/bin/xattr", args: ["-cr", "#{staged_path}"]
   end
+
+  # Marker read by the app's in-app update checker to confirm a Homebrew (cask) install
+  # (Highbyte.DotNet6502.Updates.InstallChannelDetector). Written to a support dir rather than
+  # inside the .app bundle (which would break signing); removed on uninstall so it can't go stale.
+  postflight do
+    marker_dir = File.expand_path("~/Library/Application Support/Highbyte/DotNet6502")
+    FileUtils.mkdir_p(marker_dir)
+    File.write(File.join(marker_dir, "install-channel"), "homebrew\n")
+  end
+
+  uninstall_postflight do
+    FileUtils.rm_f(File.expand_path("~/Library/Application Support/Highbyte/DotNet6502/install-channel"))
+  end
 end

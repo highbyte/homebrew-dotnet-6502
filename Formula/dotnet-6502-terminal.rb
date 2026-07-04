@@ -25,6 +25,9 @@ class Dotnet6502Terminal < Formula
   def install
     # Install everything into libexec (app needs native libs in same directory)
     libexec.install Dir["*"]
+    # Marker read by the app's in-app update checker to confirm a Homebrew install
+    # (Highbyte.DotNet6502.Updates.InstallChannelDetector); the app runs from libexec.
+    (libexec/"install-channel").write "homebrew\n"
     # Shell wrapper that launches the executable from libexec
     (bin/"dotnet-6502-terminal").write <<~EOS
       #!/bin/bash

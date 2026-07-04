@@ -18,6 +18,9 @@ class Dotnet6502 < Formula
   def install
     # Install everything into libexec (app needs native libs in same directory)
     libexec.install Dir["*"]
+    # Marker read by the app's in-app update checker to confirm a Homebrew install
+    # (Highbyte.DotNet6502.Updates.InstallChannelDetector); the app runs from libexec.
+    (libexec/"install-channel").write "homebrew\n"
     # Shell wrapper that launches the executable from libexec
     # On ARM64 Linux, SkiaSharp requires preloading libfreetype and libuuid
     # to resolve missing symbols (FT_Get_BDF_Property, uuid_generate_random).
