@@ -1,24 +1,24 @@
 class Dotnet6502Terminal < Formula
   desc "Interactive terminal (TUI) 6502/C64 emulator host"
   homepage "https://github.com/highbyte/dotnet-6502"
-  version "0.47.0-alpha"
+  version "0.47.1-alpha"
   license "MIT"
 
   on_macos do
     on_arm do
       url "https://github.com/highbyte/dotnet-6502/releases/download/v#{version}/DotNet6502-Terminal-osx-arm64.zip"
-      sha256 "a34feb403dfc28b0c1242f84bc688f11b24f71382f1b211ad6a2760555283287"
+      sha256 "6cdd454852d1bb8644677d11120ec275b9455a5d9bb23deab900e2e589e1c028"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/highbyte/dotnet-6502/releases/download/v#{version}/DotNet6502-Terminal-linux-x64.zip"
-      sha256 "bece5b4d4d66a56cb361cfe644d99e77c84e63d9fd1955a72a48aedc426b4761"
+      sha256 "77619c41fedae766b3143eee254ef4b95481ab4aa21072ee0e97254cc85a3035"
     end
     on_arm do
       url "https://github.com/highbyte/dotnet-6502/releases/download/v#{version}/DotNet6502-Terminal-linux-arm64.zip"
-      sha256 "17a7f78cdca4920513448be9827491416200e30aeabf5ad8f71cd322f43abb75"
+      sha256 "70dfa64f44d2478b17fdf04117a1a8215830bcf4e8736a6f2e39be3c0676249b"
     end
   end
 
