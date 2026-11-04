@@ -1,24 +1,24 @@
 class Dotnet6502Headless < Formula
   desc "Headless 6502/C64 emulator driven by CLI arguments and Lua scripts"
   homepage "https://github.com/highbyte/dotnet-6502"
-  version "0.47.2-alpha"
+  version "0.47.3-alpha"
   license "MIT"
 
   on_macos do
     on_arm do
       url "https://github.com/highbyte/dotnet-6502/releases/download/v#{version}/DotNet6502-Headless-osx-arm64.zip"
-      sha256 "2a865c6a6286c3d9ecb80279c66b15bde5be1423f7ea77377ca9e6c33843a076"
+      sha256 "fcf598be961a44f2af9c0bf618e4edec53884d1dd1fea5eb4ad602c3bc966380"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/highbyte/dotnet-6502/releases/download/v#{version}/DotNet6502-Headless-linux-x64.zip"
-      sha256 "9138b4193e937375f5b9a0a4c90cc5534bb44deb0f27fcabb42c8cee26299e41"
+      sha256 "b2de893d8c989959fe23f060e11c022b5d79be28bbf125853f4bb853c4f49d90"
     end
     on_arm do
       url "https://github.com/highbyte/dotnet-6502/releases/download/v#{version}/DotNet6502-Headless-linux-arm64.zip"
-      sha256 "e6855ad23d582ebf8908bdfb945e17079f57f8614b0334336be6feb856e5be4b"
+      sha256 "1286cb0b676fc22b95db3216917c09cb3e26f3279a40b0db4e1ccbb3ac048aea"
     end
   end
 
